@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1278756350444980'); // 1278756350444980
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1278756350444980&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANKAJ BHARDWAJ WAY2LAAB</title>
@@ -308,12 +332,20 @@ src="./tr"
                 </div>
             </div>
 
-            <a href="https://t.me/+ZAdPlGkG8cc2NGI1" class="cta-button">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.894 8.927c-.141.637-.516.793-1.046.494l-2.888-2.13-1.393 1.34c-.154.154-.283.283-.581.283l.207-2.958 5.338-4.824c.232-.207-.051-.322-.36-.115L8.893 13.617l-2.846-.891c-.619-.194-.632-.619.13-.916l11.12-4.286c.516-.194.968.115.799.916z"/>
-                </svg>
-                Join Telegram Channel
-            </a>
+            <a href="#" class="cta-button" onclick="trackAndRedirect(event)">
+    Join Telegram Channel
+</a>
+
+<script>
+function trackAndRedirect(e){
+    e.preventDefault(); // default link stop
+    fbq('track', 'Website Subscribe'); // track
+
+    setTimeout(function(){
+        window.location.href = "https://t.me/+ZAdPlGkG8cc2NGI1";
+    }, 800); // delay
+}
+</script>
 
             <div class="features-grid">
                 <div class="feature-item">
